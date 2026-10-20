@@ -1,0 +1,9 @@
+MODEL: opencode/deepseek-v4.1-flash-free
+LINE: OPENCODE_CONFIG_CONTENT='{"permission":{"*":"allow"},"model":"opencode/deepseek-v4.1-flash-free"}' opencode --prompt "$(__OPINPUT__ encode launch-brief < __BRIEF__)"
+ENV={"permission":{"*":"allow"},"model":"opencode/deepseek-v4.1-flash-free"}
+MODEL: opencode/a'b
+LINE: OPENCODE_CONFIG_CONTENT='{"permission":{"*":"allow"},"model":"opencode/a'\''b"}' opencode --prompt "$(__OPINPUT__ encode launch-brief < __BRIEF__)"
+ENV={"permission":{"*":"allow"},"model":"opencode/a'b"}
+MODEL: opencode/$(touch /tmp/PWNED)x
+LINE: OPENCODE_CONFIG_CONTENT='{"permission":{"*":"allow"},"model":"opencode/$(touch /tmp/PWNED)x"}' opencode --prompt "$(__OPINPUT__ encode launch-brief < __BRIEF__)"
+ENV={"permission":{"*":"allow"},"model":"opencode/$(touch /tmp/PWNED)x"}
